@@ -1,7 +1,7 @@
 //Jovann Contreras
 //Date 10/25/2022
 //Getting all challenges and adding them to one controller with different endpoints for eachone.
-//Peer reviewed by:
+//Peer reviewed by: Marcel R - Program ran well. Every endpoint accepts an input and displays properly. I like how the restraurant picker has random for all choices! :D
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
