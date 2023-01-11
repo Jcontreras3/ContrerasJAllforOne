@@ -324,7 +324,7 @@ namespace ContrerasJAllforOne.Controllers
 
 
         [HttpGet]
-        [Route("studentInfo/{studentFirstName}")]
+        [Route("studentInfoFirst/{studentFirstName}")]
         public studentListModel getStudentInfobyName(string studentFirstName)
         {
             studentListModel result = new studentListModel(){
@@ -346,7 +346,7 @@ namespace ContrerasJAllforOne.Controllers
         }
 
         [HttpGet]
-        [Route("studentInfo/{studentLastName}")]
+        [Route("studentInfoLast/{studentLastName}")]
         public studentListModel getStudentInfobyLastName(string studentLastName)
         {
             studentListModel result = new studentListModel(){
@@ -358,7 +358,7 @@ namespace ContrerasJAllforOne.Controllers
             };
 
             for(int i = 0; i < studentLists.Count; i++){
-                if(studentLists[i].firstName == studentLastName)
+                if(studentLists[i].lastName == studentLastName)
                 {
                     result = studentLists[i];
                     break;
@@ -368,7 +368,7 @@ namespace ContrerasJAllforOne.Controllers
         }
 
         [HttpGet]
-        [Route("studentInfo/{studentSlackName}")]
+        [Route("studentInfoSlack/{studentSlackName}")]
         public studentListModel getStudentInfobySlackName(string studentSlackName)
         {
             studentListModel result = new studentListModel(){
@@ -380,7 +380,7 @@ namespace ContrerasJAllforOne.Controllers
             };
 
             for(int i = 0; i < studentLists.Count; i++){
-                if(studentLists[i].firstName == studentSlackName)
+                if(studentLists[i].slackName == studentSlackName)
                 {
                     result = studentLists[i];
                     break;
@@ -390,7 +390,7 @@ namespace ContrerasJAllforOne.Controllers
         }
 
         [HttpGet]
-        [Route("studentInfo/{studentEmail}")]
+        [Route("studentInfoEmail/{studentEmail}")]
         public studentListModel getStudentInfobyEmailName(string studentEmail)
         {
             studentListModel result = new studentListModel(){
@@ -402,7 +402,7 @@ namespace ContrerasJAllforOne.Controllers
             };
 
             for(int i = 0; i < studentLists.Count; i++){
-                if(studentLists[i].firstName == studentEmail)
+                if(studentLists[i].email == studentEmail)
                 {
                     result = studentLists[i];
                     break;
