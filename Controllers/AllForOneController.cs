@@ -341,6 +341,7 @@ namespace ContrerasJAllforOne.Controllers
                     break;
                 }
             }
+            return result;
         }
         
 
