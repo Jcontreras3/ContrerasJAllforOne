@@ -23,7 +23,7 @@ namespace ContrerasJAllforOne.Controllers
 
         public string MiniCH1(string name)
         {
-            return $"Hello {name}how are you?";
+            return $"Hello {name} how are you?";
         }
 
         [HttpGet]
