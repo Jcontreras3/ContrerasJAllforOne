@@ -317,14 +317,15 @@ namespace ContrerasJAllforOne.Controllers
                 email = "areyes@codestack.co",
                 hobbies = "writing, listening to music"
             }
-        }
+        };
 
 
 
 
         [HttpGet]
         [Route("studentInfo/{firstName}")]
-        public studentListModel getStudentInfobyName(string firstName){
+        public studentListModel getStudentInfobyName(string studentFirstName)
+        {
             studentListModel result = new studentListModel(){
                 firstName = "N/A",
                 lastName  = "N/A",
@@ -334,7 +335,7 @@ namespace ContrerasJAllforOne.Controllers
             };
 
             for(int i = 0; i < studentLists.Count; i++){
-                if(studentLists[i].firstName == firstName)
+                if(studentLists[i].firstName == studentFirstName)
                 {
                     result = studentLists[i];
                     break;
