@@ -46,9 +46,9 @@ namespace ContrerasJAllforOne.Controllers
         [HttpGet]
         [Route("MiniCh4/{num1}/{num2}")]
 
-        public string MiniCH4(string answer, int num1, int num2)
+        public string MiniCH4(int num1, int num2)
         {
-
+            string answer = "";
             if (num1 > num2)
             {
                 answer = $"{num1} is greater than {num2}";
