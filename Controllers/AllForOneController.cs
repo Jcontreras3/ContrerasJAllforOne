@@ -14,8 +14,9 @@ using Microsoft.Extensions.Logging;
 
 namespace ContrerasJAllforOne.Controllers
 {
+    [ApiController]
     [Route("[controller]")]
-    public class AllForOneController : Controller
+    public class AllForOneController : ControllerBase
     {
 
         [HttpGet]
@@ -323,7 +324,7 @@ namespace ContrerasJAllforOne.Controllers
 
 
         [HttpGet]
-        [Route("studentInfo/{firstName}")]
+        [Route("studentInfo/{studentFirstName}")]
         public studentListModel getStudentInfobyName(string studentFirstName)
         {
             studentListModel result = new studentListModel(){
