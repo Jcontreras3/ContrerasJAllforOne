@@ -344,6 +344,72 @@ namespace ContrerasJAllforOne.Controllers
             }
             return result;
         }
+
+        [HttpGet]
+        [Route("studentInfo/{studentLastName}")]
+        public studentListModel getStudentInfobyLastName(string studentLastName)
+        {
+            studentListModel result = new studentListModel(){
+                firstName = "N/A",
+                lastName  = "N/A",
+                slackName = "N/A",
+                email = "N/A",
+                hobbies = "N/A"
+            };
+
+            for(int i = 0; i < studentLists.Count; i++){
+                if(studentLists[i].firstName == studentLastName)
+                {
+                    result = studentLists[i];
+                    break;
+                }
+            }
+            return result;
+        }
+
+        [HttpGet]
+        [Route("studentInfo/{studentSlackName}")]
+        public studentListModel getStudentInfobySlackName(string studentSlackName)
+        {
+            studentListModel result = new studentListModel(){
+                firstName = "N/A",
+                lastName  = "N/A",
+                slackName = "N/A",
+                email = "N/A",
+                hobbies = "N/A"
+            };
+
+            for(int i = 0; i < studentLists.Count; i++){
+                if(studentLists[i].firstName == studentSlackName)
+                {
+                    result = studentLists[i];
+                    break;
+                }
+            }
+            return result;
+        }
+
+        [HttpGet]
+        [Route("studentInfo/{studentEmail}")]
+        public studentListModel getStudentInfobyEmailName(string studentEmail)
+        {
+            studentListModel result = new studentListModel(){
+                firstName = "N/A",
+                lastName  = "N/A",
+                slackName = "N/A",
+                email = "N/A",
+                hobbies = "N/A"
+            };
+
+            for(int i = 0; i < studentLists.Count; i++){
+                if(studentLists[i].firstName == studentEmail)
+                {
+                    result = studentLists[i];
+                    break;
+                }
+            }
+            return result;
+        }
         
 
         // [HttpGet]
