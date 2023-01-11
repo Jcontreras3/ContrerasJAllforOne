@@ -19,15 +19,15 @@ if (app.Environment.IsDevelopment())
 // app.UseHttpsRedirection();
 
 
-builder.Services.AddCors(option =>{
-                option.AddPolicy("CorsPolicy",
-                              builder =>
-                              {
-                                  builder.AllowAnyOrigin()
-                                  .AllowAnyHeader()
-                                  .AllowAnyMethod();
-                              });
-            });
+// builder.Services.AddCors(option =>{
+//                 option.AddPolicy("CorsPolicy",
+//                               builder =>
+//                               {
+//                                   builder.AllowAnyOrigin()
+//                                   .AllowAnyHeader()
+//                                   .AllowAnyMethod();
+//                               });
+//             });
 
 app.UseCors("CorsPolicy");
 
