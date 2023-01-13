@@ -68,9 +68,9 @@ namespace ContrerasJAllforOne.Controllers
         [HttpGet]
         [Route("MiniCh5")]
 
-        public string MiniCH5()
+        public string MiniCH5(string adj, string fictionalCreature, string specialEvent, string adjTwo, string heOrShe, string adverb, string location, string noun, string color, string food)
         {
-            return $"The bright day was a hard day for Dragon, he got up to go to a party at the Dave and Busters but he had to go and get pizza. Walking down the side walk he had seen their favorite car in their favorite red. Continuing on he made it down to the good resturant they ran inside and grabbed the food. he made it to the party and was happy The End.";
+            return $"The {adj} day was a hard day for {fictionalCreature}, {heOrShe} got up to go to a {specialEvent} at the {location} but {heOrShe} had to go and get {food}. Walking down the side walk {heOrShe} had seen their favorite {noun} in their favorite {color}. Continuing on {heOrShe} made it down to the {adjTwo} resturant they ran inside and grabbed the food. {heOrShe} made it to the {specialEvent} and was happy The End.";
         }
 
         [HttpGet]
