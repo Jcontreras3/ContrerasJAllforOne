@@ -66,7 +66,7 @@ namespace ContrerasJAllforOne.Controllers
         }
 
         [HttpGet]
-        [Route("MiniCh5")]
+        [Route("MiniCh5/{adj}/{fictionalCreature}/{specialEvent}/{adjTwo}/{heOrShe}/{adverb}/{location}/{noun}/{color}/{food}")]
 
         public string MiniCH5(string adj, string fictionalCreature, string specialEvent, string adjTwo, string heOrShe, string adverb, string location, string noun, string color, string food)
         {
@@ -336,7 +336,7 @@ namespace ContrerasJAllforOne.Controllers
             };
 
             for(int i = 0; i < studentLists.Count; i++){
-                if(studentLists[i].firstName == studentFirstName)
+                if(studentLists[i].firstName.ToLower() == studentFirstName.ToLower())
                 {
                     result = studentLists[i];
                     break;
